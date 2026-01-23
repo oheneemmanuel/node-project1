@@ -15,7 +15,7 @@ POST http://localhost:3000/movies
 Content-Type: application/json
 
 {
-  "title": "The Matrix",
+  "title": "",
   "director": "The Wachowskis",
   "releaseYear": 1999,
   "description": "A computer hacker learns about the true nature of his reality.",

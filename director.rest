@@ -1,0 +1,39 @@
+## Render URL
+GET https://cse-341-projects-ongc.onrender.com
+
+### Visit the homepage (local)
+GET http://localhost:3000
+
+### GET all directors
+GET http://localhost:3000/directors
+
+### Get single director (local)
+GET http://localhost:3000/directors/6973adf4156417ef85523799
+
+### create a new director (local)
+POST http://localhost:3000/directors
+Content-Type: application/json
+
+{
+  "firstName": "The Wachowskis",
+  "lastName": "The Wachowskis",
+  "nationality": "American",
+  "birthYear": 1960,
+  "famousFor": "The Matrix",
+  "createdAt": "2024-01-01T00:00:00Z"
+}
+
+### update a director (local)
+PUT http://localhost:3000/directors/6973adf4156417ef85523799
+Content-Type: application/json
+
+{
+  "firstName": "The Wachowskis",
+  "lastName": "The Wachowskis",
+  "nationality": "American",
+  "birthYear": 1960,
+  "famousFor": "The Matrix",
+  "createdAt": "2024-01-01T00:00:00Z"
+}
+### delete a director (local)
+DELETE http://localhost:3000/directors/6973adf4156417ef85523799
