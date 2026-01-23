@@ -1,0 +1,41 @@
+## Render URL
+GET https://cse-341-projects-ongc.onrender.com
+
+### Visit the homepage (local)
+GET http://localhost:3000
+
+### GET all movies
+GET http://localhost:3000/movies
+
+### Get single movie (local)
+GET http://localhost:3000/movies/6973835cf8ff183911039b9d
+
+### create a new movie (local)
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "title": "The Matrix",
+  "director": "The Wachowskis",
+  "releaseYear": 1999,
+  "description": "A computer hacker learns about the true nature of his reality.",
+  "genre": "Sci-Fi",
+  "rating": 8.7,
+  "duration": 136
+}
+
+### update a movie (local)
+PUT http://localhost:3000/movies/6973835cf8ff183911039b9d
+Content-Type: application/json
+
+{
+  "title": "The Matrix Reloaded",
+  "director": "The Wachowskis",
+  "releaseYear": 2003,
+  "description": "Neo and the others fight to free the human race from the Matrix.",
+  "genre": "Sci-Fi",
+  "rating": 7.2,
+  "duration": 138
+}
+### delete a movie (local)
+DELETE http://localhost:3000/movies/696b56e30bb210710f
