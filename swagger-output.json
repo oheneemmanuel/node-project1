@@ -8,14 +8,34 @@
   "host": "node-project1-zjxy.onrender.com",
   "basePath": "/",
   "schemes": ["https"],
-  "securityDefinitions": {
-    "Bearer": {
-      "type": "apiKey",
-      "name": "Authorization",
-      "in": "header"
-    }
-  },
+
   "paths": {
+    "/auth/login": {
+      "post": {
+        "description": "Login with email and password",
+        "consumes": ["application/json"],
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "User login credentials",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "email": { "example": "user@example.com" },
+                "password": { "example": "any" }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": { "description": "OK, user is logged in" },
+          "400": { "description": "Bad Request" },
+          "401": { "description": "Unauthorized" }
+        }
+      }
+
+    },
     "/": {
       "get": {
         "description": "",
@@ -131,8 +151,8 @@
               "type": "object",
               "properties": {
                 "firstName": { "example": "any" },
-                "lastName": { "example": "any" },
-                "email": { "example": "any" }
+                "email": { "example": "any" },
+                "password": { "example": "any" }
               
               }
             }

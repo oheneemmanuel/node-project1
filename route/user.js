@@ -15,6 +15,11 @@ router.get('/:id', userController.getSingleUser);
 
 router.post(
     '/', 
+    (req, res, next) => {
+        console.log('session id:', req.sessionID); // <-- this logs every request to /users
+        console.log("Is Authenticated inside /users:", req.isAuthenticated());
+        next(); // pass control to the next middleware
+    },
     authenticate.isAuthenticated,
     validate.CreateUserRules(), 
     validate.checkUserData, 

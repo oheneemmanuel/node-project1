@@ -33,7 +33,6 @@ const createUser = async (req, res) => {
         const db = mongodb.getDatabase();
         const newUser = {
             firstName: req.body.firstName,
-            lastName: req.body.lastName,
             email: req.body.email,
             password: req.body.password,
         };
